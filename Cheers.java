@@ -8,7 +8,7 @@ Great work boaz!
 // Prints a crowd cheering output.
 public class Cheers {
         public static void main(String[] args) {
-	    String text = args[0];
+	   String text = args[0];
         int n = Integer.parseInt(args[1]);
         
         text = text.toUpperCase();
@@ -21,7 +21,7 @@ public class Cheers {
             if (anLetters.indexOf(ch) != -1) {
                 System.out.println("Give me an " + ch + ": " + ch + "!");
             } else {
-                System.out.println("Give me a " + ch + ": " + ch + "!");
+                System.out.println("Give me a  " + ch + ": " + ch + "!");
             }
         }
         

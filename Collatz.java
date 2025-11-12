@@ -1,7 +1,7 @@
 // Demonstrates the Collatz conjecture.
 public class Collatz {
 	public static void main(String args[]) {
-	   int N = Integer.parseInt(args[0]);
+	    int N = Integer.parseInt(args[0]);
         String mode = args[1];
         
         boolean isVerbose = mode.equals("v");
@@ -15,12 +15,20 @@ public class Collatz {
                 System.out.print(currentNum);
             }
 
-            while (currentNum != 1) {
+            if (currentNum == 1 && steps == 1) {
+                currentNum = 4;
+                steps++;
+                if (isVerbose) {
+                    System.out.print(" " + currentNum);
+                }
+            }
+
+            while (currentNum != 1) { 
                 
                 if (currentNum % 2 == 0) {
                     currentNum = currentNum / 2;
                 } 
-				else {
+                else {
                     currentNum = currentNum * 3 + 1;
                 }
                 
@@ -38,5 +46,5 @@ public class Collatz {
 
         System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
     
-	}
+    }
 }
